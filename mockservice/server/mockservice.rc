@@ -1,0 +1,10 @@
+service mockservice_server /system/bin/mockservice_server
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled
+    seclabel u:r:su:s0
+
+on post-fs-data
+    start mockservice_server

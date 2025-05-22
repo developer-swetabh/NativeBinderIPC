@@ -1,0 +1,11 @@
+cc_binary {
+    name: "mockservice_client",
+    srcs: [
+        "main.cpp",
+        "IpcClient.cpp",
+    ],
+    shared_libs: ["libbinder", "libutils", "liblog", "libcutils"],
+	static_libs: ["libmockservice_interface"],
+    include_dirs: ["vendor/marelli/mockservice/IpcInterface"],
+    cflags: ["-Wall", "-Wextra", "-Werror"],
+}

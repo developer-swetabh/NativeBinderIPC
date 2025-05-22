@@ -1,0 +1,13 @@
+cc_library_static {
+    name: "libmockservice_interface",
+    srcs: [
+        "IMockService.cpp",
+    ],
+    shared_libs: [
+        "libbinder",
+        "libutils",
+        "liblog"
+    ],
+    export_include_dirs: ["."],
+    cflags: ["-Wall", "-Werror"],
+}
