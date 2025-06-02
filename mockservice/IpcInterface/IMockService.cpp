@@ -53,7 +53,7 @@ status_t BnMockCallback::onTransact(uint32_t code, const Parcel& data,
                                     Parcel* reply, uint32_t flags) {
     switch (code) {
         case 1: {
-            CHECK_INTERFACE(IMockService, data, reply);
+            CHECK_INTERFACE(IMockCallback, data, reply);
             MyData incoming;
             incoming.readFromParcel(&data);
             onDataPushed(incoming);
